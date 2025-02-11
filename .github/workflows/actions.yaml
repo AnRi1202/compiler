@@ -1,5 +1,21 @@
+name: My Workflow
+
+on:
+  push:
+    branches:
+      - main  # Specify the branch you want to trigger the workflow on
+
 jobs:
   my_first_job:
     name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "Hello from My first job!"
+
   my_second_job:
     name: My second job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print another message
+        run: echo "Hello from My second job!"
